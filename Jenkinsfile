@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building the Docker image...'
-                sh 'docker build -t my-sample-app .'
+                sh 'docker build -t flask-app .'
             }
         }
         stage('Test') {
@@ -18,7 +18,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying container locally...'
-                sh 'docker run -d --name sample-app -p 8081:8080 my-sample-app || true'
+                sh 'docker run -d -p 5000:5000 --name flask-container flask-app || true'
             }
         }
     }
