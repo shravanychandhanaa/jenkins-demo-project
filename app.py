@@ -1,1 +1,1 @@
-print("Hello from Jenkins Pipeline! & checking webhooks")
+print("Hello from Jenkins Pipeline! & checking webhooks & success")
